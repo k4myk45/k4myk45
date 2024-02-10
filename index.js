@@ -36,7 +36,7 @@ app.listen(port, () => {
 });
 
 
-const statusMessages = ["Komis | Cocorp","Słucha dzwięków samochodów","Ogląda samochody"];
+const statusMessages = ["Komis | Cocorp","Słucha dzwięków samochodów","Przegląda katalog"];
 
 
 let currentIndex = 0;
