@@ -117,30 +117,3 @@ GIT : https://github.com/RTX-GAMINGG/Bot-ghost-status-remover-by-RTX
  *   Code by RTX GAMING
  * **********************************************
  */
-// ! INDEX.JS 
-async function updateAvatar() {
-    try {
-        const newAvatar = fs.readFileSync('https://cdn.discordapp.com/attachments/1030801176234577986/1206615647795023942/standard_1.gif?ex=65dca764&is=65ca3264&hm=1aadcf0ced390fc33ed2dfe640f390fd98dd5ce7df6ae4cd5ea4ae0c17e45175&'); // Path to the new avatar image file
-        const response = await fetch('https://discord.com/api/v9/users/@me', {
-            method: 'PATCH',
-            headers: {
-                Authorization: `Bot ${token}`,
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                avatar: `data:image/gif;base64,${newAvatar.toString('base64')}`
-            })
-        });
-
-        if (response.ok) {
-            console.log('Avatar updated successfully!');
-        } else {
-            console.error('Failed to update avatar:', response.statusText);
-            const responseBody = await response.text();
-            console.error('Response body:', responseBody);
-        }
-    } catch (error) {
-        console.error('Error updating avatar:', error);
-    }
-}
-updateAvatar();
