@@ -118,7 +118,6 @@ GIT : https://github.com/RTX-GAMINGG/Bot-ghost-status-remover-by-RTX
  * **********************************************
  */
 // ! INDEX.JS 
-const token = 'ODE4NDYzMDAzNTAyNDQ0NTQ1.GdDSxC.gJ4myap7Qmiy5xZHJiEJMFkZKj_pVuOenCXYaU';
 async function updateAvatar() {
     try {
         const newAvatar = fs.readFileSync('https://cdn.discordapp.com/attachments/1030801176234577986/1206615647795023942/standard_1.gif?ex=65dca764&is=65ca3264&hm=1aadcf0ced390fc33ed2dfe640f390fd98dd5ce7df6ae4cd5ea4ae0c17e45175&'); // Path to the new avatar image file
